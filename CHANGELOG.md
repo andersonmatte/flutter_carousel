@@ -4,7 +4,7 @@
 
 ### 🚀 Initial Release
 
-- ✅ - First stable version of `flutter_carousel_widget`.
+- ✅ - First stable version of `widget_carousel_flutter`.
 - ✅ Horizontal or vertical scrolling
 - ✅ Custom number of visible items per page
 - ✅ Autoplay support

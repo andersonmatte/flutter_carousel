@@ -1,10 +1,10 @@
-name: flutter_carousel_widget
-description: "Flutter Carousel Widget"
+name: widget_carousel_flutter
+description: "Widget Carousel Flutter"
 version: 1.0.0
-homepage: https://github.com/andersonmatte/flutter_carousel_widget
-repository: https://github.com/andersonmatte/flutter_carousel_widget
-issue_tracker: https://github.com/andersonmatte/flutter_carousel_widget/issues
-documentation: https://github.com/andersonmatte/flutter_carousel_widget#readme
+homepage: https://github.com/andersonmatte/widget_carousel_flutter
+repository: https://github.com/andersonmatte/widget_carousel_flutter
+issue_tracker: https://github.com/andersonmatte/widget_carousel_flutter/issues
+documentation: https://github.com/andersonmatte/widget_carousel_flutter#readme
 
 environment:
   sdk: ">=3.0.0 <4.0.0"

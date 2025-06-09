@@ -1,9 +1,10 @@
-# flutter_carousel_widget
+# widget_carousel_flutter
 
-A customizable and responsive carousel widget for Flutter. Easily display a list of items in a scrollable, paginated view with optional autoplay, navigation arrows, and responsive item counts.
+A customizable and responsive carousel widget for Flutter. Easily display a list of items in a
+scrollable, paginated view with optional autoplay, navigation arrows, and responsive item counts.
 
 ![Flutter Version](https://img.shields.io/badge/flutter-%E2%89%A53.0.0-blue)
-![Pub Version](https://img.shields.io/pub/v/flutter_carousel_widget.svg)
+![Pub Version](https://img.shields.io/pub/v/widget_carousel_flutter.svg)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 ---
@@ -14,7 +15,7 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  flutter_carousel_widget: ^1.0.0
+  widget_carousel_flutter: ^1.0.0
 
 ```
 
@@ -23,8 +24,8 @@ dependencies:
 Import in your Dart code:
 
 ```
-import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
-import 'package:flutter_carousel_widget/src/responsive_option.dart';
+import 'package:widget_carousel_flutter/widget_carousel_flutter.dart';
+import 'package:widget_carousel_flutter/src/responsive_option.dart';
 ```
 
 ## 💡 Features
@@ -41,17 +42,21 @@ import 'package:flutter_carousel_widget/src/responsive_option.dart';
 
 You can define how many items should be visible per screen width using ResponsiveOption:
 
-
 ```dart
 responsiveOptions: [
-  ResponsiveOption(maxWidth: 480, numVisible: 1),
-  ResponsiveOption(maxWidth: 800, numVisible: 2),
-  ResponsiveOption(maxWidth: double.infinity, numVisible: 3),
-],
+ResponsiveOption
+(
+maxWidth: 480, numVisible: 1),
+ResponsiveOption(maxWidth: 800, numVisible: 2),
+ResponsiveOption(maxWidth: double.infinity, numVisible: 3)
+,
+]
+,
 ```
+
 ## ✨Demos
 
-<img src="https://raw.githubusercontent.com/andersonmatte/flutter_carousel_widget/refs/heads/master/assets/fcarousel.png" width="500" height="844" alt="Flutter Icon Field Showcase" />
+<img src="https://raw.githubusercontent.com/andersonmatte/widget_carousel_flutter/refs/heads/master/assets/fcarousel.png" width="500" height="844" alt="Flutter Icon Field Showcase" />
 
 ✅ Example
 
@@ -61,14 +66,14 @@ Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
       title: const Text(
-        'Flutter Carousel',
+        'Widget Carousel Flutter',
         style: TextStyle(color: Colors.white),
       ),
       backgroundColor: Colors.deepOrangeAccent,
     ),
     body: Padding(
       padding: const EdgeInsets.all(12.0),
-      child: FlutterCarouselWidget<Product>(
+      child: WidgetCarouselFlutter<Product>(
         items: products,
         numVisible: 2,
         numScroll: 2,
@@ -204,7 +209,7 @@ Widget build(BuildContext context) {
 ## 🤝 Contributing
 
 Contributions are welcome! Open an issue or submit a pull request:
-https://github.com/andersonmatte/flutter_carousel_widget
+https://github.com/andersonmatte/widget_carousel_flutter
 
 ## 👨‍💻 Author
 

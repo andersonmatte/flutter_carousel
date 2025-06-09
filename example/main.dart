@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
-import 'package:flutter_carousel_widget/src/responsive_option.dart';
+import 'package:widget_carousel_flutter/src/responsive_option.dart';
+import 'package:widget_carousel_flutter/widget_carousel_flutter.dart';
 
 import 'product.dart';
 
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Carousel Widget',
+      title: 'Widget Carousel Flutter',
       debugShowCheckedModeBanner: false,
       home: DemoCarouselPage(),
     );
@@ -75,14 +75,14 @@ class _DemoCarouselPageState extends State<DemoCarouselPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Flutter Carousel',
+          'Widget Carousel Flutter',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.deepOrangeAccent,
       ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
-        child: FlutterCarouselWidget<Product>(
+        child: WidgetCarouselFlutter<Product>(
           items: products,
           numVisible: 2,
           numScroll: 2,

@@ -6,7 +6,7 @@ import 'responsive_option.dart';
 
 /// A customizable carousel widget for displaying scrollable items.
 /// Um widget de carrossel personalizável para exibir itens roláveis.
-class FlutterCarouselWidget<T> extends StatefulWidget {
+class WidgetCarouselFlutter<T> extends StatefulWidget {
   // List of items to display / Lista de itens a exibir
   final List<T> items;
 
@@ -34,7 +34,7 @@ class FlutterCarouselWidget<T> extends StatefulWidget {
   // Show page indicator dots / Mostrar indicadores de página
   final bool showPaginator;
 
-  const FlutterCarouselWidget({
+  const WidgetCarouselFlutter({
     Key? key,
     required this.items,
     required this.itemBuilder,
@@ -48,16 +48,20 @@ class FlutterCarouselWidget<T> extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _FlutterCarouselWidgetState<T> createState() => _FlutterCarouselWidgetState<T>();
+  _WidgetCarouselFlutterState<T> createState() =>
+      _WidgetCarouselFlutterState<T>();
 }
 
-class _FlutterCarouselWidgetState<T> extends State<FlutterCarouselWidget<T>> {
+class _WidgetCarouselFlutterState<T> extends State<WidgetCarouselFlutter<T>> {
   // Controls the page view / Controla o PageView
   late final PageController _pageController;
+
   // Index of the current page / Índice da página atual
   late int _currentPage;
+
   // Number of items per current page / Itens por página atual
   late int _itemsPerPage;
+
   // Timer for autoplay / Timer para autoplay
   Timer? _autoplayTimer;
 
@@ -169,28 +173,25 @@ class _FlutterCarouselWidgetState<T> extends State<FlutterCarouselWidget<T>> {
             },
             itemBuilder: (context, pageIndex) {
               int startIndex = pageIndex * _itemsPerPage;
-              int endIndex =
-                  (startIndex + _itemsPerPage) > widget.items.length
-                      ? widget.items.length
-                      : startIndex + _itemsPerPage;
+              int endIndex = (startIndex + _itemsPerPage) > widget.items.length
+                  ? widget.items.length
+                  : startIndex + _itemsPerPage;
               List<T> visibleItems = widget.items.sublist(startIndex, endIndex);
 
               // Builds a row or column based on scroll direction
               // Constrói uma linha ou coluna com base na direção da rolagem
               return Flex(
-                direction:
-                    widget.scrollDirection == Axis.horizontal
-                        ? Axis.horizontal
-                        : Axis.vertical,
+                direction: widget.scrollDirection == Axis.horizontal
+                    ? Axis.horizontal
+                    : Axis.vertical,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children:
-                    visibleItems
-                        .map(
-                          (item) => Expanded(
-                            child: widget.itemBuilder(context, item),
-                          ),
-                        )
-                        .toList(),
+                children: visibleItems
+                    .map(
+                      (item) => Expanded(
+                        child: widget.itemBuilder(context, item),
+                      ),
+                    )
+                    .toList(),
               );
             },
           ),

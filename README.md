@@ -51,7 +51,7 @@ responsiveOptions: [
 ```
 ## ✨Demos
 
-<img src="https://raw.githubusercontent.com/andersonmatte/flutter_icon_field_teste/refs/heads/master/assets/fcarousel.png" width="500" height="844" alt="Flutter Icon Field Showcase" />
+<img src="https://raw.githubusercontent.com/andersonmatte/flutter_carousel/refs/heads/master/assets/fcarousel.png" width="500" height="844" alt="Flutter Icon Field Showcase" />
 
 ✅ Example
 

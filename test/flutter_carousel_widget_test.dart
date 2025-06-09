@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_carousel/flutter_carousel_widget.dart';
+import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

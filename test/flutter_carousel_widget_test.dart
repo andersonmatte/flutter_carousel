@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_carousel/flutter_carousel.dart';
+import 'package:flutter_carousel/flutter_carousel_widget.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -11,7 +11,7 @@ void main() {
   }) {
     return MaterialApp(
       home: Scaffold(
-        body: FlutterCarousel<String>(
+        body: FlutterCarouselWidget<String>(
           items: List.generate(6, (index) => 'Item $index'),
           itemBuilder: (context, item) => Text(item),
           numVisible: 2,

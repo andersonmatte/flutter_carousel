@@ -6,7 +6,7 @@ import 'responsive_option.dart';
 
 /// A customizable carousel widget for displaying scrollable items.
 /// Um widget de carrossel personalizável para exibir itens roláveis.
-class FlutterCarousel<T> extends StatefulWidget {
+class FlutterCarouselWidget<T> extends StatefulWidget {
   // List of items to display / Lista de itens a exibir
   final List<T> items;
 
@@ -34,7 +34,7 @@ class FlutterCarousel<T> extends StatefulWidget {
   // Show page indicator dots / Mostrar indicadores de página
   final bool showPaginator;
 
-  const FlutterCarousel({
+  const FlutterCarouselWidget({
     Key? key,
     required this.items,
     required this.itemBuilder,
@@ -48,10 +48,10 @@ class FlutterCarousel<T> extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _FlutterCarouselState<T> createState() => _FlutterCarouselState<T>();
+  _FlutterCarouselWidgetState<T> createState() => _FlutterCarouselWidgetState<T>();
 }
 
-class _FlutterCarouselState<T> extends State<FlutterCarousel<T>> {
+class _FlutterCarouselWidgetState<T> extends State<FlutterCarouselWidget<T>> {
   // Controls the page view / Controla o PageView
   late final PageController _pageController;
   // Index of the current page / Índice da página atual

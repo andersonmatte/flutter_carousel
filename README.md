@@ -1,9 +1,9 @@
-# flutter_carousel
+# flutter_carousel_widget
 
 A customizable and responsive carousel widget for Flutter. Easily display a list of items in a scrollable, paginated view with optional autoplay, navigation arrows, and responsive item counts.
 
 ![Flutter Version](https://img.shields.io/badge/flutter-%E2%89%A53.0.0-blue)
-![Pub Version](https://img.shields.io/pub/v/flutter_carousel.svg)
+![Pub Version](https://img.shields.io/pub/v/flutter_carousel_widget.svg)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 ---
@@ -14,7 +14,7 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  flutter_carousel: ^1.0.0
+  flutter_carousel_widget: ^1.0.0
 
 ```
 
@@ -23,8 +23,8 @@ dependencies:
 Import in your Dart code:
 
 ```
-import 'package:flutter_carousel/src/flutter_carousel.dart';
-import 'package:flutter_carousel/src/responsive_option.dart';
+import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
+import 'package:flutter_carousel_widget/src/responsive_option.dart';
 ```
 
 ## 💡 Features
@@ -51,7 +51,7 @@ responsiveOptions: [
 ```
 ## ✨Demos
 
-<img src="https://raw.githubusercontent.com/andersonmatte/flutter_carousel/refs/heads/master/assets/fcarousel.png" width="500" height="844" alt="Flutter Icon Field Showcase" />
+<img src="https://raw.githubusercontent.com/andersonmatte/flutter_carousel_widget/refs/heads/master/assets/fcarousel.png" width="500" height="844" alt="Flutter Icon Field Showcase" />
 
 ✅ Example
 
@@ -68,7 +68,7 @@ Widget build(BuildContext context) {
     ),
     body: Padding(
       padding: const EdgeInsets.all(12.0),
-      child: FlutterCarousel<Product>(
+      child: FlutterCarouselWidget<Product>(
         items: products,
         numVisible: 2,
         numScroll: 2,
@@ -119,8 +119,7 @@ Widget build(BuildContext context) {
                       product.inventoryStatus,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color:
-                        product.inventoryStatus == 'In Stock'
+                        color: product.inventoryStatus == 'In Stock'
                             ? Colors.green
                             : product.inventoryStatus == 'Low Stock'
                             ? Colors.orange
@@ -145,8 +144,7 @@ Widget build(BuildContext context) {
                             style: TextStyle(color: Colors.white),
                           ),
                           style: ElevatedButton.styleFrom(
-                            backgroundColor:
-                            isInCart
+                            backgroundColor: isInCart
                                 ? Colors.redAccent
                                 : Colors.blueAccent,
                           ),
@@ -206,7 +204,7 @@ Widget build(BuildContext context) {
 ## 🤝 Contributing
 
 Contributions are welcome! Open an issue or submit a pull request:
-https://github.com/andersonmatte/flutter_carousel
+https://github.com/andersonmatte/flutter_carousel_widget
 
 ## 👨‍💻 Author
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_carousel/src/flutter_carousel.dart';
-import 'package:flutter_carousel/src/responsive_option.dart';
+import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
+import 'package:flutter_carousel_widget/src/responsive_option.dart';
+
 import 'product.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Carousel',
+      title: 'Flutter Carousel Widget',
       debugShowCheckedModeBanner: false,
       home: DemoCarouselPage(),
     );
@@ -81,7 +82,7 @@ class _DemoCarouselPageState extends State<DemoCarouselPage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
-        child: FlutterCarousel<Product>(
+        child: FlutterCarouselWidget<Product>(
           items: products,
           numVisible: 2,
           numScroll: 2,
@@ -132,10 +133,9 @@ class _DemoCarouselPageState extends State<DemoCarouselPage> {
                         product.inventoryStatus,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color:
-                              product.inventoryStatus == 'In Stock'
-                                  ? Colors.green
-                                  : product.inventoryStatus == 'Low Stock'
+                          color: product.inventoryStatus == 'In Stock'
+                              ? Colors.green
+                              : product.inventoryStatus == 'Low Stock'
                                   ? Colors.orange
                                   : Colors.red,
                         ),
@@ -158,10 +158,9 @@ class _DemoCarouselPageState extends State<DemoCarouselPage> {
                               style: TextStyle(color: Colors.white),
                             ),
                             style: ElevatedButton.styleFrom(
-                              backgroundColor:
-                                  isInCart
-                                      ? Colors.redAccent
-                                      : Colors.blueAccent,
+                              backgroundColor: isInCart
+                                  ? Colors.redAccent
+                                  : Colors.blueAccent,
                             ),
                             onPressed: () {
                               setState(() {
